@@ -1,13 +1,52 @@
-Hello! I am currently a Ph.D. candidate in Biomedical Engineering at the University of Electronic Science and Technology of China (UESTC). My research focuses on neuromorphic vision perception and small object detection, aiming to advance computational models that mimic human-like visual perception systems.
+## TDDIV Dataset
 
-## Research Interests
+### Overview
 
-- **Neuromorphic Vision Perception:** Exploring bio-inspired algorithms and models for visual processing.
-- **Small Object Detection:** Developing robust techniques for detecting and analyzing small-scale objects in complex environments.
+TDDIV is a large-scale benchmark designed for tiny drone detection in diverse and highly cluttered outdoor infrared scenes. The raw data were captured with a mid-wave infrared (MWIR) camera across woodlands, complex urban structures, and mountainous terrains.
 
-## Contact
+| Property | Value |
+|----------|-------|
+| Sequences | 121  |
+| Annotated frames | ~139,000 |
+| Bounding boxes | ~136,000 |
+| Frame rate | 25 FPS |
 
-Feel free to reach out to me via email at [yangxinioi@163.com] for discussions related to computer vision and biomedical engineering.
+### Download
+- [TDDIV dataset (full)](URL) — images, labels
 
+### Data Structure
+
+```
+TDDIV/
+├── images/
+│   ├── seq_001/
+│   │   ├── 000001.jpg
+│   │   ├── 000002.jpg
+│   │   └── ...
+│   └── ...
+├── labels/
+│   ├── seq_001
+│   │   ├── 000001.txt
+│   │   ├── 000002.txt
+│   │   └── ...
+│   └── ...
+
+```
+
+## AMSTMD
+
+AMSTMD is a training-free bio-inspired motion detector that can be used independently:
+
+```python
+from amstmd import AMSTMD
+
+detector = AMSTMD()
+
+```
+
+| Device | Input | Speed |
+|--------|-------|-------|
+| CPU | 640×512 | 33.0 ms |
+| GPU | 640×512 | 1.6 ms |
 
 
